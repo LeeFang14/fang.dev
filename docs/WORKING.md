@@ -14,9 +14,9 @@
 **進行中：Phase 1 — 基礎建設**
 
 - [x] 安裝所有套件（next@16.1.6、gray-matter、next-mdx-remote、mermaid、rehype-pretty-code、shiki、next-themes）
-- [ ] 建立目錄結構
-- [ ] 建立 `lib/posts.ts`（讀取 `.mdx` 工具函式）
-- [ ] 寫一篇測試用假文章（含 frontmatter、程式碼區塊、Mermaid）
+- [x] 建立目錄結構
+- [x] 建立 `lib/posts.ts`（讀取 `.mdx` 工具函式）
+- [x] 寫一篇測試用假文章（含 frontmatter、程式碼區塊、Mermaid）
 
 ---
 
@@ -145,9 +145,9 @@ components/
 ### Phase 1：基礎建設
 
 - [x] 安裝所有套件（next@16.1.6、gray-matter、next-mdx-remote、mermaid、rehype-pretty-code、shiki、next-themes）
-- [ ] 建立目錄結構
-- [ ] 建立 `lib/posts.ts`（讀取 `.mdx` 工具函式）
-- [ ] 寫一篇測試用假文章（含 frontmatter、程式碼區塊、Mermaid）
+- [x] 建立目錄結構
+- [x] 建立 `lib/posts.ts`（讀取 `.mdx` 工具函式）
+- [x] 寫一篇測試用假文章（含 frontmatter、程式碼區塊、Mermaid）
 
 ### Phase 2：UI（hardcode 假資料）
 
