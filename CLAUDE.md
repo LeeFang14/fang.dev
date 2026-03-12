@@ -43,7 +43,7 @@ next.config.ts      # Next.js 設定
 ### 慣例
 
 - CSS 變數定義在 `globals.css`（`--background`、`--foreground`）
-- 深色模式透過 CSS media query `prefers-color-scheme: dark` 實作
+- 深色模式透過 `next-themes` 的 class-based 切換（`.dark` class）
 - 響應式設計使用 Tailwind 的 `sm:` 斷點
 
 ## 協作規則
@@ -66,6 +66,12 @@ next.config.ts      # Next.js 設定
 1. 將該項目標記為 `[x]`
 2. 暫停，提示使用者確認是否 commit
 3. 等待使用者確認後，才繼續下一個 checkbox
+
+### WORKING.md 的邊界
+
+- **不得自行修改後續 Phase 的內容**：後續 Phase 只有使用者討論確認後才能展開或調整
+- **不得自行新增 Phase**：Phase 的規劃由使用者決定
+- **決策摘要由使用者維護**：Claude 可以提醒使用者補充，但不主動新增
 
 ### 討論轉實作時
 
