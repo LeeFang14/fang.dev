@@ -63,6 +63,7 @@ AI 使用指南：
 ## 後續 Phase
 
 - **Phase 3**：接上 `lib/posts.ts`，讀取真實 `.mdx` 檔案，加入 Tag 篩選頁 `/tags/[tag]`
+  - ⚠️ 開始前先將 `content/posts/tech/vue-reactivity.mdx` 移到 `content/posts/`（目前仍在子目錄，與決策不符）
 - **Phase 4**：About 頁面、Projects 頁面
 - **Phase 5**：SEO（metadata、OG image）、效能檢查
 
