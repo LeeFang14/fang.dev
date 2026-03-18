@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 @variant dark (&:where(.dark, .dark *));
 
 :root {
@@ -21,4 +22,25 @@
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+/* rehype-pretty-code 雙主題：完全依照 shiki 主題規則 */
+pre[data-theme*=" "] {
+  background-color: #f4f4f4;
+}
+
+.dark pre[data-theme*=" "] {
+  background-color: var(--shiki-dark-bg);
+}
+
+code[data-theme*=" "],
+code[data-theme*=" "] span {
+  color: var(--shiki-light);
+  background-color: #f4f4f4;
+}
+
+.dark code[data-theme*=" "],
+.dark code[data-theme*=" "] span {
+  color: var(--shiki-dark);
+  background-color: var(--shiki-dark-bg);
 }
