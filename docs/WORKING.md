@@ -45,7 +45,9 @@ AI 使用指南：
 
 - **深色模式用 class-based**：`next-themes` 需要 class 控制，移除原本的 `prefers-color-scheme` media query
 - **設計風格**：極簡技術感，Geist Sans/Mono，強調色 indigo，支援深淺色
-- **路由結構**：`/blog/[category]/[slug]`，category 對應 `content/posts/` 下的資料夾名稱
+- **路由結構**：`/blog/[slug]`，不分類資料夾層；分類改用 tag 系統
+- **分類設計**：不用資料夾分類，改用 frontmatter 的 `tags` 陣列；Navbar 有 Tags 頁供讀者篩選
+- **文章排序**：日期由新到舊，Google 搜尋是主要入口，URL 要乾淨
 
 ---
 
@@ -53,14 +55,14 @@ AI 使用指南：
 
 - [x] 全局 layout：Header（sticky + 毛玻璃）、導覽（Blog/About/Projects）、深淺色切換
 - [ ] 首頁：Hero 自我介紹 + 最新文章 3 篇
-- [ ] 文章列表頁 `/blog`：日期 + 標題 + 摘要 + 標籤清單
+- [ ] 文章列表頁 `/blog`：日期 + 標題 + 摘要 + tag 列表
 - [ ] 單篇文章頁：metadata + MDX 渲染（prose）+ 程式碼高亮 + Mermaid
 
 ---
 
 ## 後續 Phase
 
-- **Phase 3**：接上 `lib/posts.ts`，讀取真實 `.mdx` 檔案，加入分類與 Tag 篩選
+- **Phase 3**：接上 `lib/posts.ts`，讀取真實 `.mdx` 檔案，加入 Tag 篩選頁 `/tags/[tag]`
 - **Phase 4**：About 頁面、Projects 頁面
 - **Phase 5**：SEO（metadata、OG image）、效能檢查
 
@@ -74,10 +76,9 @@ AI 使用指南：
 ---
 title: 文章標題
 date: 2024-01-01
-category: 技術
 tags:
-  - Vue
-  - TypeScript
+  - vue
+  - typescript
 description: 文章摘要，用於列表頁和 SEO meta description
 published: true
 ---
@@ -88,16 +89,18 @@ published: true
 ```
 content/
   posts/
-    技術/
-    學習/
+    vue-reactivity.mdx          # 扁平放，不分資料夾
+    feynman-technique.mdx
   drafts/                       # 草稿（.gitignore，不推遠端）
 
 app/
   blog/
     page.tsx
-    [category]/
-      [slug]/
-        page.tsx
+    [slug]/
+      page.tsx
+  tags/
+    [tag]/
+      page.tsx                  # Phase 3 才做
   about/
     page.tsx
   projects/
