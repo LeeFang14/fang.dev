@@ -54,7 +54,7 @@ AI 使用指南：
 ## 當前 Phase：Phase 2 — UI（hardcode 假資料）
 
 - [x] 全局 layout：Header（sticky + 毛玻璃）、導覽（Blog/About/Projects）、深淺色切換
-- [ ] 首頁：Hero 自我介紹 + 最新文章 3 篇
+- [x] 首頁：Hero 自我介紹 + 最新文章 3 篇
 - [ ] 文章列表頁 `/blog`：日期 + 標題 + 摘要 + tag 列表
 - [ ] 單篇文章頁：metadata + MDX 渲染（prose）+ 程式碼高亮 + Mermaid
 
