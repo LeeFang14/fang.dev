@@ -2,6 +2,14 @@
 
 Git workflow guidelines and commit message conventions for this project.
 
+## 分支策略
+
+**GitHub Flow**（簡化版，不使用 Gitflow）
+
+- `main` — 永遠是可部署狀態，對應 Vercel production
+- `feature/*` — 每個功能開獨立分支，完成後 merge 回 main
+- feature branch push 後 Vercel 自動產生 Preview URL
+
 ## Claude's Role in Git Operations
 
 **DO NOT auto-commit:**
