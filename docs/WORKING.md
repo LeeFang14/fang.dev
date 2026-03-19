@@ -32,7 +32,7 @@ AI 使用指南：
 | 語言             | TypeScript（strict mode）           |
 | 樣式             | Tailwind CSS 4                      |
 | Frontmatter 解析 | `gray-matter`                       |
-| MDX 渲染         | `next-mdx-remote`                   |
+| MD 渲染          | `remark` + `rehype` pipeline        |
 | Mermaid 圖表     | `mermaid`（client-side 渲染）       |
 | 程式碼高亮       | `rehype-pretty-code` + `shiki`      |
 | 程式碼主題       | `github-dark` + `github-light`      |
@@ -55,17 +55,18 @@ AI 使用指南：
 
 - [x] 全局 layout：Header（sticky + 毛玻璃）、導覽（Blog/About/Projects）、深淺色切換
 - [x] 首頁：Hero 自我介紹 + 最新文章 3 篇
-- [ ] 文章列表頁 `/blog`：日期 + 標題 + 摘要 + tag 列表
-- [ ] 單篇文章頁：metadata + MDX 渲染（prose）+ 程式碼高亮 + Mermaid
+- [x] 文章列表頁 `/blog`：日期 + 標題 + 摘要 + tag 列表
+- [x] 單篇文章頁：metadata + MDX 渲染（prose）+ 程式碼高亮 + Mermaid
 
 ---
 
 ## 後續 Phase
 
-- **Phase 3**：接上 `lib/posts.ts`，讀取真實 `.mdx` 檔案，加入 Tag 篩選頁 `/tags/[tag]`
-  - ⚠️ 開始前先將 `content/posts/tech/vue-reactivity.mdx` 移到 `content/posts/`（目前仍在子目錄，與決策不符）
+- **Phase 3**：接上 `lib/posts.ts`，讀取真實 `.md` 檔案，加入 Tag 篩選頁 `/tags/[tag]`
+  - ⚠️ 開始前先將 `content/posts/tech/vue-reactivity.mdx` 改副檔名為 `.md` 並移到 `content/posts/`（目前仍在子目錄，與決策不符）
 - **Phase 4**：About 頁面、Projects 頁面
 - **Phase 5**：SEO（metadata、OG image）、效能檢查
+- **待辦（細節優化）**：程式碼區塊加入行號（`showLineNumbers`）與複製按鈕（`MermaidRenderer` useEffect 動態插入）
 
 ---
 
@@ -106,3 +107,4 @@ app/
     page.tsx
   projects/
     page.tsx
+```
