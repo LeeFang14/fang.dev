@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const TECH_STACK = ["Vue 3", "TypeScript", "Quasar"];
 
 const LATEST_POSTS = [
@@ -102,12 +104,12 @@ export default function Home() {
           ))}
         </ul>
 
-        <a
+        <Link
           href="/blog"
           className="inline-flex items-center gap-1 text-sm font-medium text-indigo-600 underline-offset-4 hover:underline dark:text-indigo-400"
         >
           查看所有文章 →
-        </a>
+        </Link>
       </section>
     </div>
   );
