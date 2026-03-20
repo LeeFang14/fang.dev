@@ -36,13 +36,6 @@ feat(api): add development mode for API testing without LIFF
 
 Enable testing quotation APIs in external browsers without requiring
 valid LINE LIFF tokens.
-
-Changes:
-- apps-script/Auth.gs: Skip auth when DEV_MODE=true
-- src/api/quotation.ts: Use DEV_TOKEN when no real token
-- apps-script/README.md: Document DEV_MODE property
-
-Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
 ---
 
 You can commit now with: git commit -m '...' or modify as needed."
@@ -52,7 +45,6 @@ You can commit now with: git commit -m '...' or modify as needed."
 
 ```bash
 npm run type-check  # Ensure no TS errors
-npm run build       # Ensure production build works
 npm run lint        # Fix any linting issues
 ```
 
