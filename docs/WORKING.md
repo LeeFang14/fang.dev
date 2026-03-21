@@ -53,7 +53,7 @@ AI 使用指南：
 
 ## 當前 Phase：Phase 3 — 接上真實資料
 
-- [ ] 實作 `lib/posts.ts`：讀取 `content/posts/*.md`，解析 frontmatter
+- [x] 實作 `lib/posts.ts`：讀取 `content/posts/*.md`，解析 frontmatter
 - [ ] 文章列表頁 `/blog`：替換假資料，改用 `lib/posts.ts`
 - [ ] 首頁最新文章：替換假資料，改用 `lib/posts.ts`
 - [ ] 單篇文章頁 `/blog/[slug]`：讀取真實 `.md` 檔，渲染內容
