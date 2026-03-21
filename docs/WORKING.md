@@ -51,7 +51,19 @@ AI 使用指南：
 
 ---
 
-## 當前 Phase：Phase 2 — UI（hardcode 假資料）
+## 當前 Phase：Phase 3 — 接上真實資料
+
+- [ ] 實作 `lib/posts.ts`：讀取 `content/posts/*.md`，解析 frontmatter
+- [ ] 文章列表頁 `/blog`：替換假資料，改用 `lib/posts.ts`
+- [ ] 首頁最新文章：替換假資料，改用 `lib/posts.ts`
+- [ ] 單篇文章頁 `/blog/[slug]`：讀取真實 `.md` 檔，渲染內容
+- [ ] Tag 篩選頁 `/tags/[tag]`：列出該 tag 下的所有文章
+
+---
+
+## 已完成 Phase
+
+### Phase 2 — UI（hardcode 假資料）
 
 - [x] 全局 layout：Header（sticky + 毛玻璃）、導覽（Blog/About/Projects）、深淺色切換
 - [x] 首頁：Hero 自我介紹 + 最新文章 3 篇
@@ -61,9 +73,6 @@ AI 使用指南：
 ---
 
 ## 後續 Phase
-
-- **Phase 3**：接上 `lib/posts.ts`，讀取真實 `.md` 檔案，加入 Tag 篩選頁 `/tags/[tag]`
-  - ⚠️ 開始前先將 `content/posts/tech/vue-reactivity.mdx` 改副檔名為 `.md` 並移到 `content/posts/`（目前仍在子目錄，與決策不符）
 - **Phase 4**：About 頁面、Projects 頁面
 - **Phase 5**：SEO（metadata、OG image）、效能檢查
 - **待辦（細節優化）**：程式碼區塊加入行號（`showLineNumbers`）與複製按鈕（`MermaidRenderer` useEffect 動態插入）
