@@ -1,30 +1,7 @@
 import Link from "next/link";
+import { getAllPosts } from "@/lib/posts";
 
 const TECH_STACK = ["Vue 3", "TypeScript", "Quasar"];
-
-const LATEST_POSTS = [
-  {
-    slug: "vue-reactivity-deep-dive",
-    title: "Vue 3 響應式原理深入解析",
-    date: "2025-03-10",
-    description: "從 Proxy 到 effect，逐步拆解 Vue 3 響應式系統的運作機制，理解為什麼它比 Vue 2 更高效。",
-    tags: ["vue", "typescript"],
-  },
-  {
-    slug: "feynman-technique-for-engineers",
-    title: "用費曼技巧學技術：我的筆記流程",
-    date: "2025-02-22",
-    description: "把複雜概念講清楚是真正理解的標誌。分享我如何用費曼技巧拆解陌生技術，並記錄思考脈絡。",
-    tags: ["learning", "career"],
-  },
-  {
-    slug: "from-manufacturing-to-frontend",
-    title: "從傳產流程管理到前端工程師的轉職路",
-    date: "2025-01-15",
-    description: "資管系畢業後在製造業工作，如何把流程拆解的習慣帶進軟體開發，最終成功轉職前端。",
-    tags: ["career"],
-  },
-];
 
 function formatDate(dateStr: string) {
   const date = new Date(dateStr);
@@ -36,6 +13,8 @@ function formatDate(dateStr: string) {
 }
 
 export default function Home() {
+  const latestPosts = getAllPosts().slice(0, 3);
+
   return (
     <div className="space-y-16">
       {/* Hero */}
@@ -79,7 +58,7 @@ export default function Home() {
       <section className="space-y-6">
         <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">最新文章</h2>
         <ul className="space-y-8">
-          {LATEST_POSTS.map((post) => (
+          {latestPosts.map((post) => (
             <li key={post.slug}>
               <a href={`/blog/${post.slug}`} className="group block space-y-2">
                 <div className="flex items-center gap-3">

@@ -5,17 +5,17 @@ import type { Post, PostMeta } from './types/post'
 
 const POSTS_DIR = path.join(process.cwd(), 'content/posts')
 
-function parsePost(filePath: string, category: string): Post | null {
+function parsePost(filePath: string): Post | null {
   const raw = fs.readFileSync(filePath, 'utf-8')
   const { data, content } = matter(raw)
 
   if (!data.published) return null
 
-  const slug = path.basename(filePath, '.mdx')
+  const slug = path.basename(filePath, '.md')
 
   return {
     slug,
-    category,
+    category: data.category ?? '',
     title: data.title,
     date: data.date,
     tags: data.tags ?? [],
@@ -26,24 +26,17 @@ function parsePost(filePath: string, category: string): Post | null {
 }
 
 export function getAllPosts(): PostMeta[] {
-  const categories = fs.readdirSync(POSTS_DIR)
-
-  const posts = categories.flatMap((category) => {
-    const categoryDir = path.join(POSTS_DIR, category)
-    if (!fs.statSync(categoryDir).isDirectory()) return []
-
-    return fs
-      .readdirSync(categoryDir)
-      .filter((file) => file.endsWith('.mdx'))
-      .map((file) => parsePost(path.join(categoryDir, file), category))
-      .filter((post): post is Post => post !== null)
-  })
+  const posts = fs
+    .readdirSync(POSTS_DIR)
+    .filter((file) => file.endsWith('.md'))
+    .map((file) => parsePost(path.join(POSTS_DIR, file)))
+    .filter((post): post is Post => post !== null)
 
   return posts.sort((a, b) => (a.date < b.date ? 1 : -1))
 }
 
-export function getPostBySlug(category: string, slug: string): Post | null {
-  const filePath = path.join(POSTS_DIR, category, `${slug}.mdx`)
+export function getPostBySlug(slug: string): Post | null {
+  const filePath = path.join(POSTS_DIR, `${slug}.md`)
   if (!fs.existsSync(filePath)) return null
-  return parsePost(filePath, category)
+  return parsePost(filePath)
 }
