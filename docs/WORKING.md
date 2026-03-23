@@ -51,13 +51,13 @@ AI 使用指南：
 
 ---
 
-## 當前 Phase：Phase 3 — 接上真實資料
+## 當前 Phase：Phase 3 — Tags 功能（續）
 
-- [x] 實作 `lib/posts.ts`：讀取 `content/posts/*.md`，解析 frontmatter
-- [x] 文章列表頁 `/blog`：替換假資料，改用 `lib/posts.ts`
-- [x] 首頁最新文章：替換假資料，改用 `lib/posts.ts`
-- [x] 單篇文章頁 `/blog/[slug]`：讀取真實 `.md` 檔，渲染內容
-- [ ] Tag 篩選頁 `/tags/[tag]`：列出該 tag 下的所有文章
+- [ ] Navbar 加入 Tags 入口，連到 `/tags`
+- [ ] `/tags` — tag 索引頁，列出所有曾使用過的 tag 名稱（點擊後跳到該 tag 的文章列表）
+- [ ] `lib/posts.ts` 加入 `getPostsByTag`：過濾指定 tag 的文章
+- [ ] `/tags/[tag]` — tag 文章列表頁，列出所有標記該 tag 的文章
+- [ ] blog 頁的 tag badge 改成可點擊連結，連到 `/tags/[tag]`
 
 ---
 
@@ -73,6 +73,7 @@ AI 使用指南：
 ---
 
 ## 後續 Phase
+
 - **Phase 4**：About 頁面、Projects 頁面
 - **Phase 5**：SEO（metadata、OG image）、效能檢查
 - **待辦（細節優化）**：程式碼區塊加入行號（`showLineNumbers`）與複製按鈕（`MermaidRenderer` useEffect 動態插入）
@@ -110,8 +111,9 @@ app/
     [slug]/
       page.tsx
   tags/
+    page.tsx
     [tag]/
-      page.tsx                  # Phase 3 才做
+      page.tsx
   about/
     page.tsx
   projects/
