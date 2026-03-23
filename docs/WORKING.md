@@ -53,8 +53,8 @@ AI 使用指南：
 
 ## 當前 Phase：Phase 3 — Tags 功能（續）
 
-- [ ] Navbar 加入 Tags 入口，連到 `/tags`
-- [ ] `/tags` — tag 索引頁，列出所有曾使用過的 tag 名稱（點擊後跳到該 tag 的文章列表）
+- [x] Navbar 加入 Tags 入口，連到 `/tags`
+- [x] `/tags` — tag 索引頁，列出所有曾使用過的 tag 名稱（點擊後跳到該 tag 的文章列表）
 - [ ] `lib/posts.ts` 加入 `getPostsByTag`：過濾指定 tag 的文章
 - [ ] `/tags/[tag]` — tag 文章列表頁，列出所有標記該 tag 的文章
 - [ ] blog 頁的 tag badge 改成可點擊連結，連到 `/tags/[tag]`

@@ -25,6 +25,7 @@ function ThemeToggle() {
 
 const navLinks = [
   { href: "/blog", label: "Blog" },
+  { href: "/tags", label: "Tags" },
   { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
 ];
