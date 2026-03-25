@@ -51,7 +51,22 @@ AI 使用指南：
 
 ---
 
-## 當前 Phase：Phase 3 — Tags 功能（續）
+## 當前 Phase：Phase 4 — About 頁面、Projects 頁面
+
+### About 頁面
+
+- [x] 建立 `app/about/page.tsx` — Initials 頭像、自我介紹文字、GitHub 連結
+- [x] 驗證 lint 通過
+
+### Projects 頁面
+
+（待討論）
+
+---
+
+## 已完成 Phase
+
+### Phase 3 — Tags 功能
 
 - [x] Navbar 加入 Tags 入口，連到 `/tags`
 - [x] `/tags` — tag 索引頁，列出所有曾使用過的 tag 名稱（點擊後跳到該 tag 的文章列表）

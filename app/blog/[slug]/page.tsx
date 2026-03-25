@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
@@ -79,12 +80,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <header className="mb-10 space-y-4">
         <div className="flex flex-wrap gap-1.5">
           {post.tags.map((tag) => (
-            <span
+            <Link
               key={tag}
-              className="rounded bg-indigo-50 px-2 py-0.5 text-xs font-medium text-indigo-600 dark:bg-indigo-950 dark:text-indigo-400"
+              href={`/tags/${tag}`}
+              className="rounded bg-indigo-50 px-2 py-0.5 text-xs font-medium text-indigo-600 transition-colors hover:bg-indigo-100 dark:bg-indigo-950 dark:text-indigo-400 dark:hover:bg-indigo-900"
             >
               {tag}
-            </span>
+            </Link>
           ))}
         </div>
         <h1 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">{post.title}</h1>
