@@ -32,10 +32,7 @@ Claude: "✅ Changes completed. Files are staged and ready to commit.
 
 Suggested commit message:
 ---
-feat(api): add development mode for API testing without LIFF
-
-Enable testing quotation APIs in external browsers without requiring
-valid LINE LIFF tokens.
+feat(tags): add tag detail page and make tag badges clickable
 ---
 
 You can commit now with: git commit -m '...' or modify as needed."
@@ -47,12 +44,6 @@ You can commit now with: git commit -m '...' or modify as needed."
 npm run type-check  # Ensure no TS errors
 npm run lint        # Fix any linting issues
 ```
-
-**Unstaged files to be aware of:**
-
-- `.env` (ignored, contains secrets)
-- `dist/` (build output, ignored)
-- `node_modules/` (dependencies, ignored)
 
 ## Commit Message Format
 

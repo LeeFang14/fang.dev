@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# fang.dev
+
+個人技術部落格，內容涵蓋技術文章、學習心得與職涯分享。
+
+## Tech Stack
+
+| 用途 | 工具 |
+| --- | --- |
+| Framework | Next.js 16 + React 19 (App Router) |
+| Language | TypeScript (strict mode) |
+| Styling | Tailwind CSS 4 |
+| Content | Markdown + remark/rehype pipeline |
+| Code Highlighting | rehype-pretty-code + Shiki |
+| Diagrams | Mermaid (client-side rendering) |
+| Theme | next-themes (light/dark) |
+| Deploy | Vercel |
+
+## Features
+
+- **Blog** — Markdown 文章，支援程式碼高亮與 Mermaid 圖表
+- **Tags** — 標籤分類系統，依 tag 篩選文章
+- **About** — 個人介紹頁
+- **Projects** — 專案作品集，卡片式展示搭配截圖
+- **Dark Mode** — 深淺色主題切換
+
+## Project Structure
+
+```
+app/
+  page.tsx                # 首頁
+  blog/
+    page.tsx              # 文章列表
+    [slug]/page.tsx       # 單篇文章
+  tags/
+    page.tsx              # Tag 索引
+    [tag]/page.tsx        # Tag 文章列表
+  about/page.tsx          # About 頁面
+  projects/page.tsx       # Projects 頁面
+components/               # 共用元件（Header、ThemeProvider）
+content/posts/            # Markdown 文章
+lib/                      # 資料存取與型別定義
+```
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+開啟 [http://localhost:3000](http://localhost:3000) 查看結果。

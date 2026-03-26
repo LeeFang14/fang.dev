@@ -51,21 +51,20 @@ AI 使用指南：
 
 ---
 
-## 當前 Phase：Phase 4 — About 頁面、Projects 頁面
+## 當前 Phase
 
-### About 頁面
-
-- [x] 建立 `app/about/page.tsx` — Initials 頭像、自我介紹文字、GitHub 連結
-- [x] 驗證 lint 通過
-
-### Projects 頁面
-
-- [x] 建立 `app/projects/page.tsx` — 專案卡片列表（hardcode 資料）
-- [x] 驗證 lint 通過
+（尚未展開，待討論）
 
 ---
 
 ## 已完成 Phase
+
+### Phase 4 — About 頁面、Projects 頁面
+
+- [x] 建立 `app/about/page.tsx` — Initials 頭像、自我介紹文字、GitHub 連結
+- [x] 驗證 lint 通過
+- [x] 建立 `app/projects/page.tsx` — 專案卡片列表（hardcode 資料）
+- [x] 驗證 lint 通過
 
 ### Phase 3 — Tags 功能
 
@@ -75,22 +74,17 @@ AI 使用指南：
 - [x] `/tags/[tag]` — tag 文章列表頁，列出所有標記該 tag 的文章
 - [x] blog 頁的 tag badge 改成可點擊連結，連到 `/tags/[tag]`
 
----
-
-## 已完成 Phase
-
 ### Phase 2 — UI（hardcode 假資料）
 
 - [x] 全局 layout：Header（sticky + 毛玻璃）、導覽（Blog/About/Projects）、深淺色切換
 - [x] 首頁：Hero 自我介紹 + 最新文章 3 篇
 - [x] 文章列表頁 `/blog`：日期 + 標題 + 摘要 + tag 列表
-- [x] 單篇文章頁：metadata + MDX 渲染（prose）+ 程式碼高亮 + Mermaid
+- [x] 單篇文章頁：metadata + MD 渲染（prose）+ 程式碼高亮 + Mermaid
 
 ---
 
 ## 後續 Phase
 
-- **Phase 4**：About 頁面、Projects 頁面
 - **Phase 5**：SEO（metadata、OG image）、效能檢查
 - **待辦（細節優化）**：程式碼區塊加入行號（`showLineNumbers`）與複製按鈕（`MermaidRenderer` useEffect 動態插入）
 
@@ -117,8 +111,8 @@ published: true
 ```
 content/
   posts/
-    vue-reactivity.mdx          # 扁平放，不分資料夾
-    feynman-technique.mdx
+    vue-reactivity.md          # 扁平放，不分資料夾
+    feynman-technique.md
   drafts/                       # 草稿（.gitignore，不推遠端）
 
 app/

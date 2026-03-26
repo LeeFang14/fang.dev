@@ -32,12 +32,32 @@ npm run lint
 ### 目錄結構
 
 ```
-app/                # Next.js App Router 根目錄
-  layout.tsx        # 根 layout，載入 Geist 字體與 metadata
-  page.tsx          # 首頁
-  globals.css       # 全局 CSS（CSS 變數、Tailwind 引入）
-public/             # 靜態資源（SVG 等）
-next.config.ts      # Next.js 設定
+app/                    # Next.js App Router 根目錄
+  layout.tsx            # 根 layout，載入 Geist 字體與 metadata
+  page.tsx              # 首頁
+  globals.css           # 全局 CSS（CSS 變數、Tailwind 引入）
+  blog/
+    page.tsx            # 文章列表頁
+    [slug]/
+      page.tsx          # 單篇文章頁
+      _components/      # 文章頁專用元件（MermaidRenderer）
+  tags/
+    page.tsx            # Tag 索引頁
+    [tag]/
+      page.tsx          # Tag 文章列表頁
+  about/
+    page.tsx            # About 頁面
+  projects/
+    page.tsx            # Projects 頁面
+components/             # 跨頁面共用元件（Header、ThemeProvider）
+content/
+  posts/                # MD 文章（扁平放置）
+  drafts/               # 草稿（.gitignore）
+lib/
+  posts.ts              # 文章資料存取邏輯
+  types/                # 共用型別定義
+public/                 # 靜態資源（SVG、圖片）
+next.config.ts          # Next.js 設定
 ```
 
 ### 慣例
@@ -88,7 +108,7 @@ next.config.ts      # Next.js 設定
 
 **commit 前必跑：**
 ```bash
-npm run build   # 確認 build 正常
+npm run type-check # 確認 type 正常
 npm run lint    # 修正 lint 問題
 ```
 
