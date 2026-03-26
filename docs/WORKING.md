@@ -60,7 +60,8 @@ AI 使用指南：
 
 ### Projects 頁面
 
-（待討論）
+- [x] 建立 `app/projects/page.tsx` — 專案卡片列表（hardcode 資料）
+- [x] 驗證 lint 通過
 
 ---
 
