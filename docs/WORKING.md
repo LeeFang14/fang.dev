@@ -48,12 +48,29 @@ AI 使用指南：
 - **路由結構**：`/blog/[slug]`，不分類資料夾層；分類改用 tag 系統
 - **分類設計**：不用資料夾分類，改用 frontmatter 的 `tags` 陣列；Navbar 有 Tags 頁供讀者篩選
 - **文章排序**：日期由新到舊，Google 搜尋是主要入口，URL 要乾淨
+- **設計改版方向**：線條結構 + 玻璃效果點綴，配色 Indigo + Slate 低調版，內容為主不搶眼
 
 ---
 
 ## 當前 Phase
 
-（尚未展開，待討論）
+### Phase 5 — 設計改版（Indigo + Slate 低調玻璃風）
+
+**背景漸層**
+- [x] `globals.css` 加入微妙的背景漸層色塊（indigo + slate），讓玻璃效果有東西可透
+
+**線條結構**
+- [ ] 文章列表（首頁、`/blog`、`/tags/[tag]`）項目之間加分隔線
+- [ ] Projects 卡片加 border
+- [ ] 頁面 section 之間加 divider
+
+**玻璃效果**
+- [ ] Header 毛玻璃效果加強
+- [ ] Projects 卡片加玻璃質感（半透明背景 + backdrop-blur + 微妙 border）
+- [ ] Tag badge 加玻璃質感
+
+**裝飾細節**
+- [ ] 頁面標題加左側邊線裝飾（border-left，indigo 色）
 
 ---
 
