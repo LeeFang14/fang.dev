@@ -61,8 +61,8 @@ AI 使用指南：
 
 **線條結構**
 - [x] 文章列表（首頁、`/blog`、`/tags/[tag]`）項目之間加分隔線
-- [ ] Projects 卡片加 border
-- [ ] 頁面 section 之間加 divider
+- [x] ~~Projects 卡片加 border~~ — 跳過，原本左邊線風格較佳
+- [x] 頁面 section 之間加 divider（首頁 Hero / 最新文章之間）
 
 **玻璃效果**
 - [ ] Header 毛玻璃效果加強

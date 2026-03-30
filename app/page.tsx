@@ -54,6 +54,8 @@ export default function Home() {
         </a>
       </section>
 
+      <hr className="border-zinc-200 dark:border-zinc-800" />
+
       {/* Latest Posts */}
       <section className="space-y-6">
         <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">最新文章</h2>
