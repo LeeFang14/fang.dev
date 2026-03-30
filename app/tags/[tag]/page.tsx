@@ -30,9 +30,9 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
           共 {posts.length} 篇文章
         </p>
       </div>
-      <ul className="space-y-10">
+      <ul className="divide-y divide-zinc-300 dark:divide-zinc-700">
         {posts.map((post) => (
-          <li key={post.slug}>
+          <li key={post.slug} className="py-8 first:pt-0">
             <a href={`/blog/${post.slug}`} className="group block space-y-2">
               <time className="text-sm text-zinc-400 dark:text-zinc-500">{formatDate(post.date)}</time>
               <h2 className="text-base font-medium text-zinc-900 underline-offset-4 group-hover:underline dark:text-zinc-100">

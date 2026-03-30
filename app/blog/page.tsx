@@ -16,9 +16,9 @@ export default function BlogPage() {
   return (
     <div className="space-y-10">
       <h1 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">文章</h1>
-      <ul className="space-y-10">
+      <ul className="divide-y divide-zinc-300 dark:divide-zinc-700">
         {posts.map((post) => (
-          <li key={post.slug} className="space-y-2">
+          <li key={post.slug} className="space-y-2 py-8 first:pt-0">
               <time className="text-sm text-zinc-400 dark:text-zinc-500">{formatDate(post.date)}</time>
               <Link href={`/blog/${post.slug}`} className="group block">
                 <h2 className="text-base font-medium text-zinc-900 underline-offset-4 group-hover:underline dark:text-zinc-100">

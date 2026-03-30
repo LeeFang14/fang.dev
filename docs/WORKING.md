@@ -60,7 +60,7 @@ AI 使用指南：
 - [x] `globals.css` 加入微妙的背景漸層色塊（indigo + slate），讓玻璃效果有東西可透
 
 **線條結構**
-- [ ] 文章列表（首頁、`/blog`、`/tags/[tag]`）項目之間加分隔線
+- [x] 文章列表（首頁、`/blog`、`/tags/[tag]`）項目之間加分隔線
 - [ ] Projects 卡片加 border
 - [ ] 頁面 section 之間加 divider
 

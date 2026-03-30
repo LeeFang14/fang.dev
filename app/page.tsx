@@ -57,9 +57,9 @@ export default function Home() {
       {/* Latest Posts */}
       <section className="space-y-6">
         <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">最新文章</h2>
-        <ul className="space-y-8">
+        <ul className="divide-y divide-zinc-300 dark:divide-zinc-700">
           {latestPosts.map((post) => (
-            <li key={post.slug}>
+            <li key={post.slug} className="py-6 first:pt-0">
               <a href={`/blog/${post.slug}`} className="group block space-y-2">
                 <div className="flex items-center gap-3">
                   <time className="text-sm text-zinc-400 dark:text-zinc-500">{formatDate(post.date)}</time>
