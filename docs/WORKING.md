@@ -65,7 +65,7 @@ AI 使用指南：
 - [x] 頁面 section 之間加 divider（首頁 Hero / 最新文章之間）
 
 **玻璃效果**
-- [ ] Header 毛玻璃效果加強
+- [x] Header 毛玻璃效果加強
 - [ ] Projects 卡片加玻璃質感（半透明背景 + backdrop-blur + 微妙 border）
 - [ ] Tag badge 加玻璃質感
 
