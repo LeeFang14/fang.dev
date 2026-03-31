@@ -54,12 +54,14 @@ export default function Home() {
         </a>
       </section>
 
+      <hr className="border-zinc-200 dark:border-zinc-800" />
+
       {/* Latest Posts */}
       <section className="space-y-6">
-        <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">最新文章</h2>
-        <ul className="space-y-8">
+        <h2 className="border-l-3 border-indigo-500 pl-3 text-lg font-semibold text-zinc-900 dark:text-zinc-50">最新文章</h2>
+        <ul className="divide-y divide-zinc-300 dark:divide-zinc-700">
           {latestPosts.map((post) => (
-            <li key={post.slug}>
+            <li key={post.slug} className="py-6 first:pt-0">
               <a href={`/blog/${post.slug}`} className="group block space-y-2">
                 <div className="flex items-center gap-3">
                   <time className="text-sm text-zinc-400 dark:text-zinc-500">{formatDate(post.date)}</time>
@@ -72,7 +74,7 @@ export default function Home() {
                   {post.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded bg-indigo-50 px-2 py-0.5 text-xs font-medium text-indigo-600 dark:bg-indigo-950 dark:text-indigo-400"
+                      className="rounded border border-indigo-200 bg-indigo-50 px-2 py-0.5 text-xs font-medium text-indigo-600 ring-1 ring-indigo-100 dark:border-indigo-400/30 dark:bg-indigo-950 dark:text-indigo-400 dark:ring-indigo-400/10"
                     >
                       {tag}
                     </span>

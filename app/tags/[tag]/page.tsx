@@ -23,16 +23,16 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
   return (
     <div className="space-y-10">
       <div className="space-y-1">
-        <h1 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
+        <h1 className="border-l-3 border-indigo-500 pl-3 text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
           {decodedTag}
         </h1>
         <p className="text-sm text-zinc-400 dark:text-zinc-500">
           共 {posts.length} 篇文章
         </p>
       </div>
-      <ul className="space-y-10">
+      <ul className="divide-y divide-zinc-300 dark:divide-zinc-700">
         {posts.map((post) => (
-          <li key={post.slug}>
+          <li key={post.slug} className="py-8 first:pt-0">
             <a href={`/blog/${post.slug}`} className="group block space-y-2">
               <time className="text-sm text-zinc-400 dark:text-zinc-500">{formatDate(post.date)}</time>
               <h2 className="text-base font-medium text-zinc-900 underline-offset-4 group-hover:underline dark:text-zinc-100">
@@ -43,7 +43,7 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
                 {post.tags.map((t) => (
                   <span
                     key={t}
-                    className="rounded bg-indigo-50 px-2 py-0.5 text-xs font-medium text-indigo-600 dark:bg-indigo-950 dark:text-indigo-400"
+                    className="rounded border border-indigo-200 bg-indigo-50 px-2 py-0.5 text-xs font-medium text-indigo-600 ring-1 ring-indigo-100 dark:border-indigo-400/30 dark:bg-indigo-950 dark:text-indigo-400 dark:ring-indigo-400/10"
                   >
                     {t}
                   </span>

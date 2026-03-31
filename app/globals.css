@@ -20,8 +20,20 @@
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(ellipse 60% 80% at 0% 50%, rgba(99, 102, 241, 0.18) 0%, transparent 100%),
+    radial-gradient(ellipse at 80% 80%, rgba(148, 163, 184, 0.14) 0%, transparent 50%), var(--background);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: var(--foreground);
+}
+
+.dark body {
+  background:
+    radial-gradient(ellipse 60% 80% at 0% 50%, rgba(99, 102, 241, 0.2) 0%, transparent 100%),
+    radial-gradient(ellipse at 80% 80%, rgba(100, 116, 139, 0.15) 0%, transparent 50%), var(--background);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 /* rehype-pretty-code 雙主題：完全依照 shiki 主題規則 */
