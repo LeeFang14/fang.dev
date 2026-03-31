@@ -15,7 +15,7 @@ export default function BlogPage() {
 
   return (
     <div className="space-y-10">
-      <h1 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">文章</h1>
+      <h1 className="border-l-3 border-indigo-500 pl-3 text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">文章</h1>
       <ul className="divide-y divide-zinc-300 dark:divide-zinc-700">
         {posts.map((post) => (
           <li key={post.slug} className="space-y-2 py-8 first:pt-0">

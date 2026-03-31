@@ -15,7 +15,7 @@ export default function TagsPage() {
 
   return (
     <div className="space-y-10">
-      <h1 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">Tags</h1>
+      <h1 className="border-l-3 border-indigo-500 pl-3 text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">分類</h1>
       <ul className="flex flex-wrap gap-3">
         {tags.map(([tag, count]) => (
           <li key={tag}>

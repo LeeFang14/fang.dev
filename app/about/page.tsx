@@ -5,13 +5,15 @@ const KEYWORDS = ["Vue 3", "TypeScript", "扣件製造業", "LINE LIFF", "AI 協
 export default function AboutPage() {
   return (
     <div className="space-y-10">
+      <h1 className="border-l-3 border-indigo-500 pl-3 text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">關於我</h1>
+
       {/* Header with avatar */}
       <div className="flex items-center gap-5">
         <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-2xl font-bold text-indigo-600 dark:bg-indigo-950 dark:text-indigo-400">
           F
         </div>
         <div className="space-y-1">
-          <h1 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">Fang Lee</h1>
+          <h2 className="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">Fang Lee</h2>
           <p className="text-sm text-zinc-400 dark:text-zinc-500">前端開發者</p>
         </div>
       </div>

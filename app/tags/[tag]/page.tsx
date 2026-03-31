@@ -23,7 +23,7 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
   return (
     <div className="space-y-10">
       <div className="space-y-1">
-        <h1 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
+        <h1 className="border-l-3 border-indigo-500 pl-3 text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
           {decodedTag}
         </h1>
         <p className="text-sm text-zinc-400 dark:text-zinc-500">

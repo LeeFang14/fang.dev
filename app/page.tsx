@@ -58,7 +58,7 @@ export default function Home() {
 
       {/* Latest Posts */}
       <section className="space-y-6">
-        <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">最新文章</h2>
+        <h2 className="border-l-3 border-indigo-500 pl-3 text-lg font-semibold text-zinc-900 dark:text-zinc-50">最新文章</h2>
         <ul className="divide-y divide-zinc-300 dark:divide-zinc-700">
           {latestPosts.map((post) => (
             <li key={post.slug} className="py-6 first:pt-0">

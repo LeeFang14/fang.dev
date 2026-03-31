@@ -70,7 +70,7 @@ AI 使用指南：
 - [x] Tag badge 加玻璃質感
 
 **裝飾細節**
-- [ ] 頁面標題加左側邊線裝飾（border-left，indigo 色）
+- [x] 頁面標題加左側邊線裝飾（border-left，indigo 色）
 
 ---
 
