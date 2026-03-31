@@ -66,8 +66,8 @@ AI 使用指南：
 
 **玻璃效果**
 - [x] Header 毛玻璃效果加強
-- [ ] Projects 卡片加玻璃質感（半透明背景 + backdrop-blur + 微妙 border）
-- [ ] Tag badge 加玻璃質感
+- [x] ~~Projects 卡片加玻璃質感~~ — 跳過，與先前取消卡片 border 的決定一致
+- [x] Tag badge 加玻璃質感
 
 **裝飾細節**
 - [ ] 頁面標題加左側邊線裝飾（border-left，indigo 色）

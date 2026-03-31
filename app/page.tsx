@@ -74,7 +74,7 @@ export default function Home() {
                   {post.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded bg-indigo-50 px-2 py-0.5 text-xs font-medium text-indigo-600 dark:bg-indigo-950 dark:text-indigo-400"
+                      className="rounded border border-indigo-200 bg-indigo-50 px-2 py-0.5 text-xs font-medium text-indigo-600 ring-1 ring-indigo-100 dark:border-indigo-400/30 dark:bg-indigo-950 dark:text-indigo-400 dark:ring-indigo-400/10"
                     >
                       {tag}
                     </span>

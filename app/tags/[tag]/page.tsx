@@ -43,7 +43,7 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
                 {post.tags.map((t) => (
                   <span
                     key={t}
-                    className="rounded bg-indigo-50 px-2 py-0.5 text-xs font-medium text-indigo-600 dark:bg-indigo-950 dark:text-indigo-400"
+                    className="rounded border border-indigo-200 bg-indigo-50 px-2 py-0.5 text-xs font-medium text-indigo-600 ring-1 ring-indigo-100 dark:border-indigo-400/30 dark:bg-indigo-950 dark:text-indigo-400 dark:ring-indigo-400/10"
                   >
                     {t}
                   </span>
