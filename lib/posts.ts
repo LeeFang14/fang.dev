@@ -9,8 +9,6 @@ function parsePost(filePath: string): Post | null {
   const raw = fs.readFileSync(filePath, 'utf-8')
   const { data, content } = matter(raw)
 
-  if (!data.published) return null
-
   const slug = path.basename(filePath, '.md')
 
   return {
@@ -20,7 +18,6 @@ function parsePost(filePath: string): Post | null {
     date: data.date,
     tags: data.tags ?? [],
     description: data.description ?? '',
-    published: data.published,
     content,
   }
 }

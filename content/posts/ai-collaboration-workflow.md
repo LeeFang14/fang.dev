@@ -5,7 +5,6 @@ tags:
   - AI
   - dev-workflow
 description: 練習跟 AI 協作開發的過程中，每次覺得煩就想辦法自動化，工作流就這樣一步步長出來了。
-published: true
 ---
 
 ## 起點

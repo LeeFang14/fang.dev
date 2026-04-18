@@ -5,7 +5,6 @@ export type PostMeta = {
   date: string
   tags: string[]
   description: string
-  published: boolean
 }
 
 export type Post = PostMeta & {

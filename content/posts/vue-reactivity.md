@@ -6,7 +6,6 @@ tags:
   - Vue
   - TypeScript
 description: 從 Proxy 到 effect，一步一步拆解 Vue 3 響應式系統的核心原理。
-published: true
 ---
 
 Vue 3 的響應式系統是整個框架的核心，理解它能幫助你寫出更高效的程式碼，並在遇到奇怪的 bug 時快速定位原因。

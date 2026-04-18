@@ -119,7 +119,6 @@ tags:
   - vue
   - typescript
 description: 文章摘要，用於列表頁和 SEO meta description
-published: true
 ---
 ```
 
