@@ -68,7 +68,11 @@ Follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) sp
    - Improving code structure, readability, or maintainability
    - Example: `refactor: extract helper functions for better reusability`
 
-5. **`chore`** - 雜項更新 (maintenance tasks)
+5. **`content`** - 文章內容 (blog posts)
+   - Adding or updating blog post content
+   - Example: `content: add AI collaboration workflow post`
+
+6. **`chore`** - 雜項更新 (maintenance tasks)
    - Changes that don't affect program behavior
    - Updating dependencies, build tools, or configuration files
    - Example: `chore: update browserslist and refresh caniuse-lite`
